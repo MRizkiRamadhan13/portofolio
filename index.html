@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. RIZKI RAMADHAN</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('kingemyu.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .sidebar {
+            width: 220px;
+            background: rgb(200, 200, 200);
+            color: rgb(0, 0, 0);
+            height: 120vh;
+            position: fixed;
+            padding: 20px;
+        }
+        .sidebar img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .sidebar h1 {
+            font-size: 24px;
+        }
+        .sidebar a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 50px;
+        }
+        .profile-card {
+            display: none;
+            background: rgb(200, 200, 200);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .profile-card.active {
+            display: block;
+        }
+        .profile-card h2 {
+            color: #0048ff;
+        }
+        .profile-card p {
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.profile-card');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="profile.jpg" alt="Foto Profil">
+        <h1>M. RIZKI RAMADHAN</h1>
+        <nav>
+            <a onclick="showSection('profil')">Profil</a>
+            <a onclick="showSection('pendidikan')">Pendidikan</a>
+            <a onclick="showSection('pengalaman')">Pengalaman</a>
+            <a onclick="showSection('keahlian')">Keahlian</a>
+            <a onclick="showSection('kontak')">Kontak</a>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="profile-card active" id="profil">
+            <h2>PROFIL</h2>
+            <p>NAMA LENGKAP     : M.RIZKI RAMADHAN</p>
+            <p>TANGGAL LAHIR    : BEKASI, 13 OKTOBER 2005</p>
+            <p>DESKRIPSI        : Saya adalah mahasiswa jurusan Teknik Informatika di Universitas Pelita Bangsa dengan minat dan motivasi tinggi untuk mengembangkan keterampilan di bidang informatika. Berkomitmen untuk belajar terus belajar dan berkembang serta berkontribusi secara positif di lingkungan kerja.</p>
+        </div>
+        <div class="profile-card" id="pendidikan">
+            <h2>PENDIDIKAN</h2>
+            <p>- SMAN 1 PEBAYURAN</p>
+            <p>- SMPN 1 PEBAYURAN</p>
+            <p>- MI AL-IFTAH</p>
+        </div>
+        <div class="profile-card" id="pengalaman">
+          <h2>PENGALAMAN</h2>
+          <p>FRESH GRADUATE</p>
+        </div>
+        <div class="profile-card" id="keahlian">
+            <h2>KEAHLIAN</h2>
+            <p>Microsoft Office, Html, desain grafis, analisis data dengan Excel/Python, dll.</p>
+        </div>
+        <div class="profile-card" id="kontak">
+            <h2>KONTAK</h2>
+            <p>EMAIL     : muhammadrizkiramadhan13102005@gmail.com</p>
+            <p>NO.TELPON : 085691225031</p>
+            <p>LINKEDIN  : https://www.linkedin.com/in/m-rizki-ramadhan-07447b308/</p>
+        </div>
+    </div>
+</body>
+</html>
